@@ -1,0 +1,203 @@
+/* V.3 Marquee */
+
+.Content3 {
+  display: flex;
+  flex-direction: column;
+  grid-row-start: 7;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: 80%;
+  height: 150px;
+  width: 900px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10% 80%,
+    transparent
+  );
+  margin-top: 10px;
+  border: solid red 3px;
+}
+
+.item2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: gray;
+}
+
+.Marqueeline1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  height: 50px;
+  overflow: hidden;
+  /* border: solid red 3px; */
+  animatio: intro2 3s ease-out 12s 1 forwards;
+  opacit: 0;
+}
+
+.Marqueeline1 .Marquee {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+
+.Marqueeline1 .Marquee .item2 {
+  width: var(--width);
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  animation: autoRun 22s linear infinite;
+  animation-delay: calc(
+    (22s / var(--quantity)) * (var(--position) - 1)
+  ) !important;
+  transition: filter 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: all 0.65s ease;
+  /* border: solid blue 3px; */
+}
+
+/* On Hold
+  
+  .Marqueeline1:hover .item2 {
+    animation-play-state: paused !important;
+  }
+  
+  */
+
+.Marqueeline1 .item2:hover {
+  cursor: pointer;
+  color: red;
+}
+
+/* BREAK */
+
+.Marqueeline2 {
+  display: flex;
+  align-items: flex-start;
+  height: 50px;
+  overflow: hidden;
+  /* border: solid red 3px; */
+  animatio: intro2 3s ease-out 12s 1 forwards;
+  opacit: 0;
+}
+
+.Marqueeline2 .Marquee {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+
+.Marqueeline2 .Marquee .item2 {
+  width: var(--width);
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  animation: autoRun 28s linear infinite;
+  animation-delay: calc(
+    (28s / var(--quantity)) * (var(--position) - 1)
+  ) !important;
+  transition: filter 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: all 0.65s ease;
+  /* border: solid blue 3px; */
+}
+
+/* On Hold
+  
+  .Marqueeline2:hover .item2 {
+    animation-play-state: paused !important;
+  }
+  
+  */
+
+.Marqueeline2 .item2:hover {
+  cursor: pointer;
+  color: red;
+}
+
+/* BREAK */
+
+.Marqueeline3 {
+  display: flex;
+  align-items: flex-start;
+  height: 50px;
+  overflow: hidden;
+  /* border: solid red 3px; */
+  animatio: intro2 3s ease-out 12s 1 forwards;
+  opacit: 0;
+}
+
+.Marqueeline3 .Marquee {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+
+.Marqueeline3 .Marquee .item2 {
+  width: var(--width);
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  animation: autoRun 40s linear infinite;
+  animation-delay: calc(
+    (40s / var(--quantity)) * (var(--position) - 1)
+  ) !important;
+  transition: filter 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: all 0.65s ease;
+  /* border: solid blue 3px; */
+}
+
+.Marqueeline3 .Marquee .item2:nth-child(2) {
+  width: 1550px;
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  transition: filter 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: all 0.65s ease;
+  /* border: solid blue 3px; */
+}
+
+.Marqueeline3 .Marquee .item2:nth-child(2):hover {
+  cursor: pointer;
+  color: red;
+}
+
+/* On Hold
+  
+  .Marqueeline3:hover .item2 {
+    animation-play-state: paused !important;
+  }
+  
+  */
+.Marqueeline3 .item2:hover {
+  cursor: pointer;
+  color: red;
+}
+
+/* POP-UP FOR MARQUEE*/

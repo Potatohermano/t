@@ -1,0 +1,3253 @@
+<!--
+Side Notes
+1. Shift+Alt+Up/Down to Copy+Paste 
+2. box-shadow: x-axis, y-axis, blur, color
+3. Select selection then either; Shift+Tab (TO REMOVE INDENT FROM ALL), or Tab (TO INDENT ALL)
+4. Select pieces of code, and do SHIFT+/ to make it all a comment
+-->
+
+<!--
+                                          *Patch Note 0.4*
+1. Swapped Content 2 and 3 names, and reorganized code order
+2. App.js
+  2.1 = name correction
+  2.2 = clean up
+  2.3 = new code for content2 button (display more/less content)
+3. Content2 HTML + CSS
+  3.1 = clean up 
+  3.2 = adjustment (class to id for "content2")
+  3.2 = title and button positioning
+  3.3 = button and cls function
+  3.4 = proper frameing for "content2"'s content
+  3.5 = minor adjustment for card+pic+name framework
+4. Reworked JS.app and CSS code for "content2"
+  - From id to class ("content2" and "btn2")
+    JS.app
+
+    From
+    "function _f(id) {
+      return document.getElementById(id);
+    }
+
+    let div = _f("content2");
+    let btn = _f("btn2");
+
+    btn.onclick = function () {
+      if (div.className == "cls") {
+        div.className = "";
+        btn.innerHTML = "▼";
+      } else {
+        div.className = "cls";
+        btn.innerHTML = "▲";
+      }
+    };"
+
+    To 
+    "function _f(className) {
+    return document.getElementsByClassName(className);
+    }
+
+    let divs = _f("content2");
+    let btns = _f("btn2");
+
+    if (divs.length > 0 && btns.length > 0) {
+      let div = divs[0];
+      let btn = btns[0];
+
+      btn.onclick = function () {
+        if (div.classList.contains("cls")) {
+          div.classList.remove("cls");
+          btn.innerHTML = "▼";
+        } else {
+          div.classList.add("cls");
+          btn.innerHTML = "▲";
+        }
+      };
+    }"
+
+To Do List
+1. Fix the shifting of the logo animation
+2.figure out the '"div class="block,"' bug"
+3. Add slide in photo for the content 1 similar to the sliding in name, etc.
+4. finalize content 3
+
+
+
+                                          *Patch Note 0.5*                                
+1. Resolved the "blocks" bug issue in Content_2 HTML (just found div and /div of block >_<)
+
+
+
+                                          *Patch Note 0.55*
+1. Fixed the bouncing contributors (CSS)
+  - removed ".content2" flex properties 
+      "display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;"
+  - Reworked 
+      ".content2.cls .cardframe {
+      margin-top: 28px;}"
+2.Reorganized HTML Line "<script src="app.js" defer></script>" to top
+
+To Do List
+1. MAYBE add back lights based on the contributor's favorite color
+2. Add slide in photo for the content 1 similar to the sliding in name, etc.
+3. finalize content 3 (brainstorm ideas)
+
+
+
+                                          *Patch Note 0.6*
+1. CSS - Content 1 
+  1.1 Removed Junk Code
+      ".person .btn {
+      margin-left: 5px;
+      opacity: 0;
+      animation: animate 1s ease-in-out 1.2s 1 forwards;}"
+  1.2 Removed unnecessary paths (i.e., "xxx.xxx.xxx {}")
+  1.3 Reduce Junk Code 
+    From
+      ".content1 .item1 .list"
+    To
+     ".list"
+  1.4 Reduce Junk Code + Rework
+    From
+      ".item1 .list .person {
+      position: absolute;
+      top: 470px;
+      width: 400px;
+      text-align: left;
+      color: #fff;
+      display: none;}"
+    To
+      ".person {
+        position: absolute;
+        width: 950px;
+        height: 600px;
+        text-align: left;
+        color: #fff;
+        display: none;}"
+  1.5 Reduce Junk Code + Rework
+    From
+      ".item1 .list:nth-child(2) .person {
+      display: flex;
+      top: 2.75%;
+      left: 55%;
+      justify-content: flex-start;
+      align-items: center;
+      justify-items: center;
+      flex-direction: column;}"
+    To
+      ".item1 .list:nth-child(2) .person {
+      display: flex;
+      align-items: flex-start;
+      align-items: center;
+      flex-direction: row;}"
+
+  1.6 New CSS for "div class = pic"
+    .pic {
+    position: relative;
+    left: 5.5%;
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    border: solid red 3px;
+    object-fit: fill;
+    opacity: 0;
+    overflow: hidden;
+    display: block;
+    animation: animate 1s ease-in-out 1s 1 forwards;}
+
+  1.7 New Css for "div class = package"
+    .package {
+    position: relative;
+    right: -12%;
+    top: -20%;
+    width: 400px;
+    height: 200px;
+    border: solid red 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;}
+
+  1.8 Rework CSS ".arrow" 
+    From
+      ".arrows {
+      position: absolute;
+      top: 90%;
+      right: 52%;
+      z-index: 100;
+      width: 300px;
+      max-width: 30%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;}"
+    To
+      ".arrows {
+      position: absolute;
+      top: 84%;
+      right: 25%;
+      z-index: 100;
+      width: 300px;
+      max-width: 30%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;}"
+
+2. HTML - Content 1
+  - New Divs + Reconfig All Content 1
+    - From
+          <div class="list">
+            <img src="a1.png" />
+            <div class="person">
+              <div class="title">Michael Lofchie</div>
+              <div class="name">5/23/2024</div>
+              <div class="des">"Always strive for quality"</div>
+            </div>
+          </div>
+    - To
+          <div class="list">
+            <img src="a1.png" />
+            <div class="person">
+              <div class="pic"><img src="a1.png" /></div>
+              <div class="package">
+                <div class="title">Michael Lofchie</div>
+                <div class="name">5/23/2024</div>
+                <div class="des">"Always strive for quality"</div>
+              </div>
+            </div>
+          </div>
+
+
+
+                                          *Patch Note 0.7*
+1. Content_1_Individuals CSS
+  - Remove ".person" from ".title," ".name," and ".des"
+  - Reduced ".arrow button" size (50 -> 40)
+  - Adjust ".arrow" position
+      From    
+        top: 84%;
+        right: 25%;
+      To
+        top: 85%;
+        right: 20%;
+  - Removed animation from ".title," ".name," and ".des"
+  - Changed opacity for ".title," ".name," and ".des" from 0 to 1
+  - Added opacity (0) for ".pic" and ".package"
+  - Added animations for ".pic" and ".package"
+    ("Pic 1s ease-in-out 1s 1 forwards" & "Pic_Info 1s ease-in-out 2s 1 forwards")
+  - Added row-gap (10) to ".package"
+  - Added z-index to ".pic"
+  - Added background-color (black) to ".package"
+2. Content1 HTML
+  - Added two new slides
+    Featuring Mustafa and "lorem text"
+3. Content_2_Contributors CSS
+  - Added margin-top (-10px) to ".container"
+4. Content_3_Marquee CSS
+  - Changed margin-top from 15px to 10px in ".content3"
+5. Keyframe CSS
+  - New Keyframes
+    @keyframes Pic {
+      from {
+        transform: translateX(-100%);
+        filter: blur(10px);
+      }
+      to {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes Pic_Info {
+      from {
+        transform: translateX(-110%);
+        filter: blur(10px);
+      }
+      to {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+.6 Content3_2 HTML
+  -Added Mustafa's Quote
+    
+  
+
+                                          *Patch Note 0.8*
+1. Content_1_Individuals (CSS)
+  - Removed margin-top from ".des"
+  - Added padding-left & ...right: 20px; to ".des"
+  - Added padding-bottom: 20px; to ".name"
+  - Added padding: 10px; to ".title" 
+  - ".des" font-size change from 18px to 20px
+  - ".name" font-size change from 20px to 25px
+2. New Div + Button in HTML
+  <div id="myImg">
+    <button id="myButton">Close</button><br />
+  </div>
+3. New CSS page "Pop-up"
+  #myImg {
+    width: 800px;
+    height: 500px;
+    border: red solid 3px;
+    border-radius: 10px;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    opacity: 0;
+    position: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 80px;
+    z-index: 10000;
+    transition: 0.75s;
+  }
+
+  #myButton {
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 25px;
+    height: 35px;
+    width: 80px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #myButton:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }       
+4. Pop-up code in JS.app
+  const myButton = document.getElementById("myButton");
+  const myImg = document.getElementById("myImg");
+  const blockcards = document.getElementsByClassName("blockcard");
+
+  Array.from(blockcards).forEach(blockcard => {
+
+    blockcard.addEventListener("click", () => {
+        myImg.style.opacity = "1";
+    })})
+
+
+  myButton.addEventListener("click", event => {
+    if(myImg.style.opacity = "1"){
+      myImg.style.opacity = "0";
+      myButton.style.opacity = "Close" 
+    } 
+    else {
+      myImg.style.opacity = "block";
+    }
+  });
+5. Content_1_Individuals CSS
+  - reworked ".arrows"
+  from
+    top: 85%;
+    right: 20%;
+  to
+    top: 92.6%;
+    right: 58%;
+5. Content_2_Contributors
+  - Added
+  .blockcard:hover {
+  cursor: pointer;
+  }
+6. HTML Content2 Added #s (1-16) to div class = ".blockcard"
+  - From ".blockcard" to ".blockcard #"
+7. Reconfig JS.app code for Pop-up
+  - From
+  const blockcards = document.getElementsByClassName("blockcard");
+  To
+  const blockcards = document.getElementsByClassName("1");
+8. Assigned # values to Pop-up divs
+9. Revamped & added more divs to Pop-up
+  -    
+    <div id="myImg1">
+      <div class="Popframework">
+        <div class="Popdesframework">
+          <div class="Popimgframework">
+            <div class="Popimg"><img src="insect.png" /></div>
+            <div class="Popname">Place_Holder</div>
+          </div>
+          <div class="Popinfo">
+            <h2>Hi</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A illo
+            tempora natus. 
+            <h2>Hi</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A illo
+            tempora natus. 
+            <h2>piza</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <h2>piza</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            ipsa commodi deserunt quaerat, doloribus eligendi vero quam.
+            <h2>piza</h2>
+            Impedit ipsa commodi deserunt quaerat, doloribus eligendi vero quam, vel
+            quod unde aut aliquam velit eum qui sit quia doloremque nisi
+            quasi?
+          </div>
+        </div>
+        <button id="myButton1">Close</button>
+      </div>
+    </div>
+10. Revamped & added CSS for Pop-up
+  - 
+    .Popframework {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 600px;
+    width: 950px;
+    opacity: 1;
+    transition: ease-in 2s;
+    animatio: Popinfo 1s ease-in 1s 1 both;
+  }
+
+  .Popdesframework {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 500px;
+    width: 800px;
+  }
+
+  .Popimgframework {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 10px;
+  }
+
+  .Popimg {
+    height: 200px;
+    width: 200px;
+    border: blue solid 3px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Popname {
+    height: 30px;
+    width: 200px;
+    border: blue solid 3px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .Popinfo {
+    height: 400px;
+    width: 400px;
+    border: white solid 3px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+  }
+
+  .Popinfo h2 {
+    line-height: 0px;
+  }
+
+  #myImg1 {
+    width: 950px;
+    height: 0px;
+    border: red solid 3px;
+    border-radius: 30px;
+    background-color: red;
+    display: block;
+    opacity: 0;
+    align-content: center;
+    position: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 30px;
+    z-index: 10000;
+
+  }
+
+  #myButton1 {
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 25px;
+    height: 35px;
+    width: 80px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  #myButton1:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+11. Revamped & added JS for Pop-up
+  -
+    const myButton1 = document.getElementById("myButton1");
+    const myImg1 = document.getElementById("myImg1");
+    const blockcards1 = document.getElementsByClassName("1");
+
+    Array.from(blockcards1).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        myImg1.style.opacity = "1";
+      });
+    });
+
+    myButton1.addEventListener("click", (event) => {
+      if ((myImg1.style.opacity = "1")){
+        myImg1.style.opacity = "0";
+        myButton1.style.opacity = "Close";
+      } else {
+        myImg1.style.opacity = "1";
+      }
+    });
+
+    Array.from(blockcards1).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        myImg1.style.height = "500px";
+      });
+    });
+
+    myButton1.addEventListener("click", (event) => {
+      if ((myImg1.style.height = "500px")){
+        myImg1.style.height = "0px";
+        myButton1.style.height = "Close";
+      } else {
+        myImg1.style.height = "500px";
+      }
+    });
+
+    FIGURE OUT TRANSITION FOR DISPLAY & OPACITY CONFLICT
+
+
+
+                           *Patch Note 0.85 might have missed some other config*
+1. Pop-up.css Revamp
+  .Popframework1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 600px;
+    width: 950px;
+    opacity: 1;
+  }
+
+  .Popdesframework1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 600px;
+    width: 950px;
+  }
+
+  .Popimgframework1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 10px;
+  }
+
+  .Popimg1 {
+    height: 300px;
+    width: 300px;
+    border: blue solid 3px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Popname1 {
+    height: 30px;
+    width: 300px;
+    border: blue solid 3px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .Popinfo1 {
+    height: 500px;
+    width: 500px;
+    border: white solid 3px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  .Popinfo1 h2 {
+    line-height: 25px;
+    margin: 0px;
+    font-size: 23px;
+    margin-top: 9px;
+  }
+
+  .Popinfo1 h4 {
+    line-height: 20px;
+    margin: 0;
+    font-size: 17.5px;
+    font-weight: normal;
+  }
+
+  #PopLayout1 {
+    width: 950px;
+    height: 0px;
+    border: red solid 3px;
+    border-radius: 30px;
+    background-color: red;
+    display: none;
+    opacity: 0;
+    align-content: center;
+    position: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 30px;
+    z-index: 10000;
+    animation: Popinfo 0.25s ease-in 0s 1 forwards;
+  }
+
+  #Popbtn1 {
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 25px;
+    height: 35px;
+    width: 80px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+    transition: 0.5s;
+  }
+
+  #Popbtn1:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+
+  Repeat 16x
+2. Content_1_Individuals.css
+  .item1 .list:nth-child(2) .person {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .pic {
+
+    /* REMOVED
+    position: relative;
+    left: 5.5%;
+    */
+
+    height: 500px;
+    width: 400px;
+    z-index: 2;
+    border-radius: 10px;
+    border: solid red 3px;
+    opacity: 0;
+    overflow: hidden;
+    animation: Pic 1s ease-in-out 1s 1 forwards;
+  }
+
+  .package {
+    position: relative;
+    
+    right: -10%; REMOVED
+
+    top: -16%;
+    width: 400px;
+    height: 300px;
+    border: solid red 3px;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    opacity: 0;
+    animation: Pic_Info 1s ease-in-out 2s 1 forwards;
+  }
+3.Index Pop-up section
+  Removed/Revised
+    Pursing a passion or a secure career? 
+    Should second chances be given?
+    Quote
+4. JS Pop-up Revision
+  const Popbtn1 = document.getElementById("Popbtn1");
+  const PopLayout1 = document.getElementById("PopLayout1");
+  const blockcard1 = document.getElementsByClassName("blockcard 1");
+
+  Array.from(blockcard1).forEach((blockcard) => {
+    blockcard.addEventListener("click", () => {
+      PopLayout1.style.display = "flex";
+      PopLayout1.style.transition = "opacity 1s ease-in-out;";
+    });
+  });
+
+  Popbtn1.addEventListener("click", (event) => {
+    if ((PopLayout1.style.display = "flex")) {
+      PopLayout1.style.display = "none";
+    } else {
+      PopLayout1.style.display = "flex";
+    }
+  });
+
+  Array.from(blockcard1).forEach((blockcard) => {
+    blockcard.addEventListener("click", () => {
+      PopLayout1.style.height = "600px";
+    });
+  });
+
+  Popbtn1.addEventListener("click", (event) => {
+    if ((PopLayout1.style.height = "600px")) {
+      PopLayout1.style.height = "0px";
+    } else {
+      PopLayout1.style.height = "600px";
+    }
+  });
+5. Seperate JS files
+    Pop-ups.js (new)
+6. Seperate Patch notes from index.html
+    New Patch Notes.HTML
+
+
+
+                                          *Patch Note 0.875*
+1. index.html - Revise Content 3 Marquee (new div class = "Content3")
+  <div class="Content3">
+      <div
+        class="Marqueeline1"
+        style="--width: 225px; --height: 50px; --quantity: 6"
+      >
+        <div class="Marquee">
+          <div class="item2" style="--position: 1">
+            "Always strive for quality"
+          </div>
+          <div class="item2" style="--position: 2">
+            "You can do it! Ganbare!"
+          </div>
+          <div class="item2" style="--position: 3">Place_Holder1</div>
+          <div class="item2" style="--position: 4">Place_Holder2</div>
+          <div class="item2" style="--position: 5">Place_Holder3</div>
+          <div class="item2" style="--position: 6">Place_Holder4</div>
+        </div>
+      </div>
+
+      <div
+        class="Marqueeline2"
+        style="--width: 660px; --height: 50px; --quantity: 3"
+      >
+        <div class="Marquee">
+          <div class="item2" style="--position: 1">
+            "No matter how many times you're about to quit, there's always room
+            for dessert"
+          </div>
+          <div class="item2" style="--position: 2">
+            "Being unique is difficult when you realise everyone else is doing
+            the same thing"
+          </div>
+          <div class="item2" style="--position: 3">
+            "We're all gonna die someday, so might as well make people smile
+            along the way"
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="Marqueeline3"
+        style="--width: 1350px; --height: 50px; --quantity: 2"
+      >
+        <div class="Marquee">
+          <div class="item2" style="--position: 1">
+            "I believe the most important characteristic in anyone you meet is
+            kindness. Kindness means never forgetting other people are also
+            human, and treating them as such."
+          </div>
+          <div class="item2" style="--position: 2">
+            "To live in the present is to dance with time itself, letting each
+            second paint its own masterpiece, free from the shadows of yesterday
+            and the worries of tomorrow."
+          </div>
+        </div>
+      </div>
+    </div>
+2. Content_3_Marquee.css Revision
+    /* V.3 Marquee */
+    .Content3 {
+      display: flex;
+      flex-direction: column;
+      grid-row-start: 7;
+      grid-row-end: 7;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      width: 80%;
+      height: 200px;
+      width: 80%;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      overflow: hidden;
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10% 80%,
+        transparent
+      );
+    }
+
+    .item2 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .Marqueeline1 {
+      display: flex;
+
+
+      height: var(--height);
+      overflow: hidden;
+      border: solid red 3px;
+      animatio: intro2 3s ease-out 12s 1 forwards;
+      opacit: 0;
+    }
+
+    .Marqueeline1 .Marquee {
+      display: flex;
+      width: 100%;
+      min-width: calc(var(--width) * var(--quantity));
+      position: relative;
+    }
+
+    .Marqueeline1 .Marquee .item2 {
+      width: var(--width);
+      height: var(--height);
+      position: absolute;
+      left: 100%;
+      animation: autoRun 22s linear infinite;
+      animation-delay: calc(
+        (22s / var(--quantity)) * (var(--position) - 1)
+      ) !important;
+      transition: filter 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      transition: all 0.65s ease;
+      border: solid blue 3px;
+    }
+
+    /* On Hold
+      
+      .Marqueeline1:hover .item2 {
+        animation-play-state: paused !important;
+      }
+      
+      */
+
+    .Marqueeline1 .item2:hover {
+      cursor: pointer;
+      color: red;
+    }
+
+    /* BREAK */
+
+    .Marqueeline2 {
+      display: flex;
+
+
+      height: var(--height);
+      overflow: hidden;
+      border: solid red 3px;
+      animatio: intro2 3s ease-out 12s 1 forwards;
+      opacit: 0;
+    }
+
+    .Marqueeline2 .Marquee {
+      display: flex;
+      width: 100%;
+      min-width: calc(var(--width) * var(--quantity));
+      position: relative;
+    }
+
+    .Marqueeline2 .Marquee .item2 {
+      width: var(--width);
+      height: var(--height);
+      position: absolute;
+      left: 100%;
+      animation: autoRun 28s linear infinite;
+      animation-delay: calc(
+        (28s / var(--quantity)) * (var(--position) - 1)
+      ) !important;
+      transition: filter 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      transition: all 0.65s ease;
+      border: solid blue 3px;
+    }
+
+    /* On Hold
+      
+      .Marqueeline2:hover .item2 {
+        animation-play-state: paused !important;
+      }
+      
+      */
+
+    .Marqueeline2 .item2:hover {
+      cursor: pointer;
+      color: red;
+    }
+
+    /* BREAK */
+
+    .Marqueeline3 {
+      display: flex;
+
+      height: var(--height);
+      overflow: hidden;
+      border: solid red 3px;
+      animatio: intro2 3s ease-out 12s 1 forwards;
+      opacit: 0;
+    }
+
+    .Marqueeline3 .Marquee {
+      display: flex;
+      width: 100%;
+      min-width: calc(var(--width) * var(--quantity));
+      position: relative;
+    }
+
+    .Marqueeline3 .Marquee .item2 {
+      width: var(--width);
+      height: var(--height);
+      position: absolute;
+      left: 100%;
+      animation: autoRun 32s linear infinite;
+      animation-delay: calc(
+        (32s / var(--quantity)) * (var(--position) - 1)
+      ) !important;
+      transition: filter 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      transition: all 0.65s ease;
+      border: solid blue 3px;
+    }
+
+    /* On Hold
+      
+      .Marqueeline3:hover .item2 {
+        animation-play-state: paused !important;
+      }
+      
+      */
+    .Marqueeline3 .item2:hover {
+      cursor: pointer;
+      color: red;
+    }
+3. index.HTML
+    Fix Bryan's name twice now
+      1. Byran to Bryan
+      2. Le to Ly
+    Change Content 3, Marqueeline2 + 3's widths
+4. Revised Content_3_Marquee.css 
+    Changed .Marqueeline3 .Marquee .item2 animation timer
+        animation: autoRun 40s linear infinite;
+        animation-delay: calc(
+          (40s / var(--quantity)) * (var(--position) - 1)
+        ) !important;
+5. Html + CSS - Content_2_Contributors
+    5.1 - Added 8 people:
+      Carlo Aguila
+      Amir Alexander
+      Salvador Cebreros
+      Bruce Hsu
+      Michael Lofchie
+      Bryan Ly
+      Mustafa Siddiqui
+      Junjie Ye
+    5.2 - Reconfig .blockname { width:#px } for each person
+    5.3 - Introduced new css lines
+      .blockcard:nth-child(1) .blockname{
+        background-color: white;
+        width: 120px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        opacity: 0;
+        transition: 0.5s;
+        filter: blur(5px);
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .blockcard:nth-child(3) .blockname{
+        background-color: white;
+        width: 170px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        opacity: 0;
+        transition: 0.5s;
+        filter: blur(5px);
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .blockcard:nth-child(4) .blockname{
+        background-color: white;
+        width: 105px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        opacity: 0;
+        transition: 0.5s;
+        filter: blur(5px);
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .blockcard:nth-child(5) .blockname{
+        background-color: white;
+        width: 150px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        opacity: 0;
+        transition: 0.5s;
+        filter: blur(5px);
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .blockcard:nth-child(6) .blockname{
+        background-color: white;
+        width: 95px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        opacity: 0;
+        transition: 0.5s;
+        filter: blur(5px);
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .blockcard:nth-child(8) .blockname{
+        background-color: white;
+        width: 95px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        opacity: 0;
+        transition: 0.5s;
+        filter: blur(5px);
+        font-weight: bold;
+        font-size: 20px;
+      }   
+    5.4 - Added Bruce and JJ's responses to the six Qs
+    5.5 - Organized blockcards by alphabetical order
+    5.6 - Adjusted each blockcard's name length (div class="blockname")    
+    5.7 - Added cursor:pointer; 
+      .Popname# (1-16) {
+        height: 30px;
+        width: 205px;
+        font-size: 25px;
+        font-weight: bold;
+        border: blue solid 3px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        cursor: pointer;
+      }
+      .Popinfo# (1-16) {
+        line-height: 25px;
+        margin: 0px;
+        font-size: 23px;
+        margin-top: 9px;
+        cursor: pointer;
+      }
+
+      .Popinfo# (1-16) {
+        line-height: 20px;
+        margin: 0;
+        font-size: 17.5px;
+        font-weight: normal;
+        cursor: pointer;
+      }
+6. CSS - Adjusted Content_1_Individuals
+    6.1 - Adjusted padding for the three below
+      .title1 {
+        padding: 10px;
+        font-size: 50px;
+        color: white;
+        font-weight: bold;
+        opacity: 1;
+        line-height: 1;
+      }
+
+      .name {
+        padding-top: 7px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        opacity: 1;
+      }
+
+      .des {
+        padding: 10px;
+        font-size: 20px;
+        opacity: 1;
+      }
+    6.2 - Added new .div class = "title2"
+      /* For longer names use .title2*/
+      .title2 {
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 50px;
+        color: white;
+        font-weight: bold;
+        opacity: 1;
+      }
+7. Fixed a bug in Pop-ups.js
+    7.1 - missing lines of code for pop-up8
+      const Popbtn8 = document.getElementById("Popbtn8");
+      const PopLayout8 = document.getElementById("PopLayout8");
+      const blockcard8 = document.getElementsByClassName("blockcard 8");
+
+      Array.from(blockcard8).forEach((blockcard) => {
+        blockcard.addEventListener("click", () => {
+          PopLayout8.style.display = "flex";
+        });
+      });
+
+      Popbtn8.addEventListener("click", (event) => {
+        if ((PopLayout8.style.display = "flex")) {
+          PopLayout8.style.display = "none";
+        } else {
+          PopLayout8.style.display = "flex";
+        }
+      });
+
+      Array.from(blockcard8).forEach((blockcard) => {
+        blockcard.addEventListener("click", () => {
+          PopLayout8.style.height = "600px";
+        });
+      });
+
+      Popbtn8.addEventListener("click", (event) => {
+        if ((PopLayout8.style.height = "600px")) {
+          PopLayout8.style.height = "0px";
+        } else {
+          PopLayout8.style.height = "600px";
+        }
+      });
+
+
+
+                                          *Patch Note 0.88*
+1. Added CSS - Content_3_Marquee.css
+  .Marqueeline3 .Marquee .item2:nth-child(2) {
+  width: 1550px;
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  transition: filter 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: all 0.65s ease;
+  border: solid blue 3px;
+  }
+2. Added profile pic folder
+3. HTML - Added photos for Bruce and Bryan
+  3.1 - Replaced Placeholders
+    class="block benefits"><img src="Profile_Pic/Bruce.jpg"/></div>
+    <div class="Popimg4"><img src="Profile_Pic/Bruce.jpg" /></div>
+    <div class="block benefits"><img src="Profile_Pic/Bryan.jpg" /></div>
+    <div class="Popimg6"><img src="Profile_Pic/Bryan.jpg"/></div>       
+4. HTML - Added sub class to .div class="pic __X__"
+  4.1 Config to div "pic"
+    <div class="pic Michael_Lofchie"><img src="a1.png" /></div>
+    <div class="pic Michael_Lofchie"><img src="a1.png" /></div>
+    <div class="pic Amir_Alexander"><img src="a1.png" /></div>
+    <div class="pic Bruce_Hsu"><img src="Profile_Pic/Bruce.jpg" /></div>
+    <div class="pic Salvador_Cebreros"><img src="a1.png" /></div>
+    <div class="pic Carlo_Aguila"><img src="a1.png" /></div>
+    <div class="pic Bryan_Ly"><img src="Profile_Pic/Bryan.jpg" /></div>
+    <div class="pic Mustafa_Siddiqui"><img src="a1.png" /></div>
+    <div class="pic Junjie_Ye"><img src="a1.png" /></div>  
+5. CSS - Content_1_Individuals
+  5.1 Added and Config img size, border, and position
+    .pic {
+    /*
+    position: relative;
+    left: 5.5%;
+    */
+    height: 500px;
+    width: 400px;
+    z-index: 2;
+    border-radius: 10px;
+    border: solid red 3px;
+    opacity: 0;
+    overflow: hidden;
+    animation: Pic 1s ease-in-out 1s 1 forwards;
+    }
+
+    .Bruce_Hsu {
+      height: 425px;
+      width: 400px;
+      position: relative;
+      top: -6%;
+      border-radius: 10px;
+      border: solid black 1px;
+      box-shadow: 3px 3px 5px black;
+      transition: 0.1s;
+      cursor: pointer;
+    }
+
+    .Bruce_Hsu img {
+      width: 140%;
+      display: flex;
+      position: relative;
+      left: -18.5%;
+    }
+
+    .Bruce_Hsu:hover {
+      position: relative;
+      top: -5%;
+      left: 0.1%;
+      box-shadow: 0px 0px 0px;
+    }
+
+    .Bryan_Ly {
+      height: 425px;
+      width: 400px;
+      position: relative;
+      top: -6%;
+      border-radius: 10px;
+      border: solid black 1px;
+      box-shadow: 3px 3px 5px black;
+      transition: 0.1s;
+      cursor: pointer;
+    }
+
+    .Bryan_Ly:hover {
+      position: relative;
+      top: -5%;
+      left: 0.1%;
+      box-shadow: 0px 0px 0px;
+    }    
+6. Pop-ups.js 
+  6.1 - Added and Clean up code
+    const Popbtn4 = document.getElementById("Popbtn4");
+    const PopLayout4 = document.getElementById("PopLayout4");
+    const blockcard4 = document.getElementsByClassName("blockcard 4");
+    const ProfilePic4 = document.getElementsByClassName("Bruce_Hsu");
+
+    Array.from(ProfilePic4).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout4.style.display = "flex";
+        PopLayout4.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard4).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout4.style.display = "flex";
+        PopLayout4.style.height = "600px";
+      });
+    });
+
+    Popbtn4.addEventListener("click", (event) => {
+      if ((PopLayout4.style.display = "flex")) {
+        PopLayout4.style.display = "none";
+      } else {
+        PopLayout4.style.display = "flex";
+      }
+    });
+
+    Popbtn4.addEventListener("click", (event) => {
+      if ((PopLayout4.style.height = "600px")) {
+        PopLayout4.style.height = "0px";
+      } else {
+        PopLayout4.style.height = "600px";
+      }
+    });
+    const Popbtn6 = document.getElementById("Popbtn6");
+    const PopLayout6 = document.getElementById("PopLayout6");
+    const blockcard6 = document.getElementsByClassName("blockcard 6");
+    const ProfilePic6 = document.getElementsByClassName("Bryan_Ly");
+
+    Array.from(ProfilePic6).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout6.style.display = "flex";
+        PopLayout6.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard6).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout6.style.display = "flex";
+        PopLayout6.style.height = "600px";
+      });
+    });
+
+    Popbtn6.addEventListener("click", (event) => {
+      if ((PopLayout6.style.display = "flex")) {
+        PopLayout6.style.display = "none";
+      } else {
+        PopLayout6.style.display = "flex";
+      }
+    });
+
+    Popbtn6.addEventListener("click", (event) => {
+      if ((PopLayout6.style.height = "600px")) {
+        PopLayout6.style.height = "0px";
+      } else {
+        PopLayout6.style.height = "600px";
+      }
+    });
+  6.2 - Cleaned up Pop-ups.js code, Removed extra "Array.from...", and added height to same code frame
+      Array.from(blockcard6).forEach((blockcard) => {
+        blockcard.addEventListener("click", () => {
+        PopLayout6.style.display = "flex";
+        PopLayout6.style.height = "600px";
+      });
+      });    
+7. CSS - Content_1_Individuals
+  7.1 - edited pic hover
+    .Bruce_Hsu:hover {
+    position: relative;
+    top: -6%;
+    left: 0.0125%;
+    box-shadow: 0px 0px 0px;
+    }
+    .Bryan_Ly:hover {
+    position: relative;
+    top: -6%;
+    left: 0.0125%;
+    box-shadow: 0px 0px 0px;
+    }    
+8. JS - Pop-ups.js clean up, and add necessary code
+  8.1 - 
+    const Popbtn1 = document.getElementById("Popbtn1");
+    const PopLayout1 = document.getElementById("PopLayout1");
+    const blockcard1 = document.getElementsByClassName("blockcard 1");
+    const ProfilePic1 = document.getElementsByClassName("Carlo_Aguila");
+
+    Array.from(ProfilePic1).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout2.style.display = "flex";
+        PopLayout2.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard1).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout1.style.display = "flex";
+        PopLayout1.style.height = "600px";
+      });
+    });
+
+    Popbtn1.addEventListener("click", (event) => {
+      if ((PopLayout1.style.display = "flex")) {
+        PopLayout1.style.display = "none";
+      } else {
+        PopLayout1.style.display = "flex";
+      }
+      if ((PopLayout1.style.height = "600px")) {
+        PopLayout1.style.height = "0px";
+      } else {
+        PopLayout1.style.height = "600px";
+      }
+    });
+
+    /*Break*/
+    const Popbtn2 = document.getElementById("Popbtn2");
+    const PopLayout2 = document.getElementById("PopLayout2");
+    const blockcard2 = document.getElementsByClassName("blockcard 2");
+    const ProfilePic2 = document.getElementsByClassName("Amir_Alexander");
+
+    Array.from(ProfilePic2).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout2.style.display = "flex";
+        PopLayout2.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard2).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout2.style.display = "flex";
+        PopLayout2.style.height = "600px";
+      });
+    });
+
+    Popbtn2.addEventListener("click", (event) => {
+      if ((PopLayout2.style.display = "flex")) {
+        PopLayout2.style.display = "none";
+      } else {
+        PopLayout2.style.display = "flex";
+      }
+      if ((PopLayout2.style.height = "600px")) {
+        PopLayout2.style.height = "0px";
+      } else {
+        PopLayout2.style.height = "600px";
+      }
+    });
+
+    /*Break*/
+    const Popbtn3 = document.getElementById("Popbtn3");
+    const PopLayout3 = document.getElementById("PopLayout3");
+    const blockcard3 = document.getElementsByClassName("blockcard 3");
+    const ProfilePic3 = document.getElementsByClassName("Salvador_Cebreros");
+
+    Array.from(ProfilePic3).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout3.style.display = "flex";
+        PopLayout3.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard3).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout3.style.display = "flex";
+        PopLayout3.style.height = "600px";
+      });
+    });
+
+    Popbtn3.addEventListener("click", (event) => {
+      if ((PopLayout3.style.display = "flex")) {
+        PopLayout3.style.display = "none";
+      } else {
+        PopLayout3.style.display = "flex";
+      }
+      if ((PopLayout3.style.height = "600px")) {
+        PopLayout3.style.height = "0px";
+      } else {
+        PopLayout3.style.height = "600px";
+      }
+    });
+    /*Break*/
+
+    const Popbtn5 = document.getElementById("Popbtn5");
+    const PopLayout5 = document.getElementById("PopLayout5");
+    const blockcard5 = document.getElementsByClassName("blockcard 5");
+    const ProfilePic5 = document.getElementsByClassName("Michael_Lofchie");
+
+    Array.from(ProfilePic5).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout5.style.display = "flex";
+        PopLayout5.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard5).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout5.style.display = "flex";
+        PopLayout5.style.height = "600px";
+      });
+    });
+
+    Popbtn5.addEventListener("click", (event) => {
+      if ((PopLayout5.style.display = "flex")) {
+        PopLayout5.style.display = "none";
+      } else {
+        PopLayout5.style.display = "flex";
+      }
+      if ((PopLayout5.style.height = "600px")) {
+        PopLayout5.style.height = "0px";
+      } else {
+        PopLayout5.style.height = "600px";
+      }
+    });
+    const Popbtn7 = document.getElementById("Popbtn7");
+    const PopLayout7 = document.getElementById("PopLayout7");
+    const blockcard7 = document.getElementsByClassName("blockcard 7");
+    const ProfilePic7 = document.getElementsByClassName("Mustafa_Siddiqui");
+
+    Array.from(ProfilePic7).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout7.style.display = "flex";
+        PopLayout7.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard7).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout7.style.display = "flex";
+        PopLayout7.style.height = "600px";
+      });
+    });
+
+    Popbtn7.addEventListener("click", (event) => {
+      if ((PopLayout7.style.display = "flex")) {
+        PopLayout7.style.display = "none";
+      } else {
+        PopLayout7.style.display = "flex";
+      }
+      if ((PopLayout7.style.height = "600px")) {
+        PopLayout7.style.height = "0px";
+      } else {
+        PopLayout7.style.height = "600px";
+      }
+    });
+
+    /*Break*/
+
+    const Popbtn8 = document.getElementById("Popbtn8");
+    const PopLayout8 = document.getElementById("PopLayout8");
+    const blockcard8 = document.getElementsByClassName("blockcard 8");
+    const ProfilePic8 = document.getElementsByClassName("Junjie_Ye");
+
+    Array.from(ProfilePic8).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        PopLayout8.style.display = "flex";
+        PopLayout8.style.height = "600px";
+      });
+    });
+
+    Array.from(blockcard8).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        PopLayout8.style.display = "flex";
+        PopLayout8.style.height = "600px";
+      });
+    });
+
+    Popbtn8.addEventListener("click", (event) => {
+      if ((PopLayout8.style.display = "flex")) {
+        PopLayout8.style.display = "none";
+      } else {
+        PopLayout8.style.display = "flex";
+      }
+      if ((PopLayout8.style.height = "600px")) {
+        PopLayout8.style.height = "0px";
+      } else {
+        PopLayout8.style.height = "600px";
+      }
+    });
+  8.2 - Fixed Bug with Carlo pic - Content 1
+    from    
+    PopLayout2.style.display = "flex";
+    PopLayout2.style.height = "600px";
+    to    
+    PopLayout1.style.display = "flex";
+    PopLayout1.style.height = "600px";
+9. Input everyone's quote into their specific pop-up
+10. Added _# to everyone's quote section in pop-up
+11. Resized Contributors box, reduced width
+12. Remove code in Content_1_Individuals.css
+    12.1 removed junk img code
+      .Bruce_Hsu:hover {
+      position: relative;
+      top: -6%;
+      left: 0.0125%;
+      box-shadow: 0px 0px 0px;
+      } 
+      .Bryan_Ly:hover {
+      position: relative;
+      top: -6%;
+      left: 0.0125%;
+      box-shadow: 0px 0px 0px;
+      } 
+13. Revised Copywrite positioning - HTML
+  13.1 - Re-implied footer
+      <footer>
+        <div class="end">
+          &copy;PotatoHermano
+        </div>
+      </footer>   
+14. Revised School of Quotes Framework, "end" - CSS
+  14.1 - Configed ".end"
+    end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 30px;
+    }    
+15. Pop-ups.css
+  15.1 Added Code to #Popbtn#, hopefully fixs mobile device bug with Close button
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;    
+16. HTML - <title>Quote Library</title> - Website title  
+
+
+
+Patch 8.9
+1. CSS - Content_2_Contributors
+  1.1 - 
+  .blockname {
+  border: solid gray 1px;
+  }
+
+  .benefits {
+  border: solid gray 1px;
+  }
+
+  .blockcard {
+  background-color: silver;
+  border: solid silver 3px;
+  box-shadow: 2px 2px 1px;
+  }
+
+  .blockcard:hover {
+  border: solid red 3px;
+  box-shadow: 0px 0px 0px;
+  }
+
+  .content2_title {
+  border: solid red 2px;
+  }
+  
+  .btn2 {
+  border: solid black 2px;
+  }
+2. CSS - Content_3_Marquee
+  2.1 - Commented these lines/Removed and added border
+    border: solid red 3px;
+    border: solid blue 3px;
+    border: solid red 3px;
+    border: solid blue 3px;
+    border: solid red 3px;
+    border: solid blue 3px;
+    border: solid blue 3px;
+
+  .Content3 {
+  border: solid red 3px;
+3. JS - Pop-ups
+  3.1 - Added pop-up feature for Marquee section
+    const Marquee# = document.getElementsByClassName("Name#");
+
+    Array.from(Marquee#).forEach((item2) => {
+      item2.addEventListener("click", () => {
+        PopLayout#.style.display = "flex";
+        PopLayout#.style.height = "600px";
+      });
+    });
+    }
+4. HTML - index
+      4.1 - Junjie Ye's Pop-up, Removed Uncensored Version
+      4.2 - Junjie Ye's Pop-up, Added more context
+      4.3 - Renamed Quote Library to School of Quotes
+      4.4 - Removed five id=box#
+        <div class="box" id="box1">
+          <h1>School of Quotes</h1>
+        </div>
+
+        <div class="box" id="box2">
+          <h1>School of Quotes</h1>
+        </div> 
+
+        <div class="box_1" id="box4">
+          <h1>Hand</h1>
+        </div>
+
+        <div class="box_1" id="box5">
+          <h1>Hand</h1>
+        </div>
+
+        <div class="box_1" id="box6">
+          <h1>Hand</h1>
+        </div> 
+      
+5. CSS - Content_1_Individuals
+  5.1 - Fixed div names in CSS
+    Bruce_Hsu1 and Bryan_Ly1
+6. CSS - Pop-Ups
+  6.1 - Adjust Popinfo#'s height
+    .Popinfo3 {
+      height: 370px;
+    }
+    .Popinfo4 {
+      height: 450px;
+    }
+    .Popinfo8 {
+      height: 400px;
+    }
+7. CSS - School of Quotes framework
+  7.1 - Removed #box#
+    #box1 {
+      position: absolute;
+      animation: Logo-Down 3s ease-in 0s 1 normal forwards;
+    }
+
+    #box2 {
+      position: absolute;
+      animation: Logo-Still 1s ease-in 3s 1 normal forwards;
+      opacity: 0;
+      color: blue;
+    } 
+    #box4 {
+      position: absolute;
+      animation: hand-up1 2s ease-in 2s 1 normal forwards;
+      opacity: 0;
+      color: red;
+      font-size: larger;
+    }
+
+    #box5 {
+      position: absolute;
+      animation: hand-up2 2.5s ease-in 4s 1 normal forwards;
+      opacity: 0;
+      color: purple;
+      font-size: larger;
+    }
+
+    #box6 {
+      position: absolute;
+      animation: hand-up3 2.5s ease-in 6.5s 1 normal forwards;
+      opacity: 0;
+      color: black;
+      font-size: larger;
+    } 
+
+    .box_1 {
+      display: flex;
+      width: 200px;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      font-size: larger;
+      border: solid red 3px;
+    }
+
+    #box3 {
+      position: absolute;
+      animation: Logo-Up 2.5s ease-in 4s 1 normal forwards;
+      opacity: 1;
+      color: black;
+      font-size: larger;
+    }
+      
+    .Main_Frame {
+      align-items: center;
+      align-content: center;
+      margin-bottom: -110px;
+      padding: 0px;
+      .box h1{
+      font-size: 55px;
+    }    
+
+
+
+                                              *Patch Note 0.90*
+1. HTML - index
+  1.1 - Added div class = test1 & test2
+    <div class="Main_Frame">
+      <div class="box">
+        <div class="test1">Hi</div>
+        <h1>School of Quotes</h1>
+        <div class="test2">Hi</div>
+      </div>
+    </div>
+2. CSS - School of Quotes framework
+  2.1 - Test1 & 2 codes, box, and hover for test#
+    .box {
+      width: 800px;
+    }
+    .test1 {
+      opacity: 0;
+      height: 100px;
+      width: 100px;
+      background-color: green;
+      color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      transition: 1s;
+    }
+
+    .box:hover .test1 {
+      opacity: 1;
+    }
+
+    .test2 {
+      opacity: 0;
+      height: 100px;
+      width: 100px;
+      background-color: green;
+      color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      transition: 1s;
+    }
+
+    .box:hover .test2 {
+      opacity: 1;
+    } 
+  2.2 - Removed
+    .Main_Frame {
+      background-color: red;
+    } 
+      
+    
+                                              *Patch Note 0.91*
+1. JS - Pop-ups.js
+  1.1 - MAJOR REWORK
+    /* Pop-up */
+
+    function showPopLayout(popLayout) {
+      popLayout.classList.add("show");
+    }
+
+    function hidePopLayout(popLayout) {
+      popLayout.classList.remove("show");
+    }
+
+    // Select the common button and pop-up layouts
+    const Popbtn1 = document.getElementById("Popbtn1");
+    const Popbtn2 = document.getElementById("Popbtn2");
+    const Popbtn3 = document.getElementById("Popbtn3");
+    const Popbtn4 = document.getElementById("Popbtn4");
+    const Popbtn5 = document.getElementById("Popbtn5");
+    const Popbtn6 = document.getElementById("Popbtn6");
+    const Popbtn7 = document.getElementById("Popbtn7");
+    const Popbtn8 = document.getElementById("Popbtn8");
+    const Popbtn9 = document.getElementById("Popbtn9");
+    const Popbtn10 = document.getElementById("Popbtn10");
+    const Popbtn11 = document.getElementById("Popbtn11");
+    const Popbtn12 = document.getElementById("Popbtn12");
+    const Popbtn13 = document.getElementById("Popbtn13");
+    const Popbtn14 = document.getElementById("Popbtn14");
+    const Popbtn15 = document.getElementById("Popbtn15");
+    const Popbtn16 = document.getElementById("Popbtn16");
+
+    const PopLayout1 = document.getElementById("PopLayout1");
+    const PopLayout2 = document.getElementById("PopLayout2");
+    const PopLayout3 = document.getElementById("PopLayout3");
+    const PopLayout4 = document.getElementById("PopLayout4");
+    const PopLayout5 = document.getElementById("PopLayout5");
+    const PopLayout6 = document.getElementById("PopLayout6");
+    const PopLayout7 = document.getElementById("PopLayout7");
+    const PopLayout8 = document.getElementById("PopLayout8");
+    const PopLayout9 = document.getElementById("PopLayout9");
+    const PopLayout10 = document.getElementById("PopLayout10");
+    const PopLayout11 = document.getElementById("PopLayout11");
+    const PopLayout12 = document.getElementById("PopLayout12");
+    const PopLayout13 = document.getElementById("PopLayout13");
+    const PopLayout14 = document.getElementById("PopLayout14");
+    const PopLayout15 = document.getElementById("PopLayout15");
+    const PopLayout16 = document.getElementById("PopLayout16");
+
+    // Select elements that should trigger pop-ups
+    const blockcard1 = document.getElementsByClassName("blockcard 1");
+    const ProfilePic1 = document.getElementsByClassName("Carlo_Aguila1");
+    const Marquee1 = document.getElementsByClassName("Carlo_Aguila2");
+
+    const blockcard2 = document.getElementsByClassName("blockcard 2");
+    const ProfilePic2 = document.getElementsByClassName("Amir_Alexander1");
+    const Marquee2 = document.getElementsByClassName("Amir_Alexander2");
+
+    const blockcard3 = document.getElementsByClassName("blockcard 3");
+    const ProfilePic3 = document.getElementsByClassName("Salvador_Cebreros1");
+    const Marquee3 = document.getElementsByClassName("Salvador_Cebreros2");
+
+    const blockcard4 = document.getElementsByClassName("blockcard 4");
+    const ProfilePic4 = document.getElementsByClassName("Bruce_Hsu1");
+    const Marquee4 = document.getElementsByClassName("Bruce_Hsu2");
+
+    const blockcard5 = document.getElementsByClassName("blockcard 5");
+    const ProfilePic5 = document.getElementsByClassName("Michael_Lofchie1");
+    const Marquee5 = document.getElementsByClassName("Michael_Lofchie2");
+
+    const blockcard6 = document.getElementsByClassName("blockcard 6");
+    const ProfilePic6 = document.getElementsByClassName("Bryan_Ly1");
+    const Marquee6 = document.getElementsByClassName("Bryan_Ly2");
+
+    const blockcard7 = document.getElementsByClassName("blockcard 7");
+    const ProfilePic7 = document.getElementsByClassName("Mustafa_Siddiqui1");
+    const Marquee7 = document.getElementsByClassName("Mustafa_Siddiqui2");
+
+    const blockcard8 = document.getElementsByClassName("blockcard 8");
+    const ProfilePic8 = document.getElementsByClassName("Junjie_Ye1");
+    const Marquee8 = document.getElementsByClassName("Junjie_Ye2");
+
+    const blockcard9 = document.getElementsByClassName("blockcard 9");
+
+    const blockcard10 = document.getElementsByClassName("blockcard 10");
+
+    const blockcard11 = document.getElementsByClassName("blockcard 11");
+
+    const blockcard12 = document.getElementsByClassName("blockcard 12");
+
+    const blockcard13 = document.getElementsByClassName("blockcard 13");
+
+    const blockcard14 = document.getElementsByClassName("blockcard 14");
+
+    const blockcard15 = document.getElementsByClassName("blockcard 15");
+
+    const blockcard16 = document.getElementsByClassName("blockcard 16");
+
+
+    // Function to show a specific pop-up
+    function showPopLayout(popLayout) {
+      popLayout.style.display = "flex";
+      popLayout.style.height = "600px";
+    }
+
+    // Function to hide a specific pop-up
+    function hidePopLayout(popLayout) {
+      popLayout.style.display = "none";
+      popLayout.style.height = "0px";
+    }
+
+    // Event listeners for showing pop-ups
+    Array.from(Marquee1).forEach((item) => {
+      item.addEventListener("click", () => {
+        showPopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic1).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        showPopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard1).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        showPopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    Array.from(Marquee2).forEach((item) => {
+      item.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        showPopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic2).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        showPopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard2).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        showPopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    Array.from(Marquee3).forEach((item) => {
+      item.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        showPopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic3).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        showPopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard3).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        showPopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    Array.from(Marquee4).forEach((item) => {
+      item.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        showPopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic4).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        showPopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard4).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        showPopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    Array.from(Marquee5).forEach((item) => {
+      item.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        showPopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic5).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        showPopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard5).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        showPopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    Array.from(Marquee6).forEach((item) => {
+      item.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        showPopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic6).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        showPopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard6).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        showPopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    Array.from(Marquee7).forEach((item) => {
+      item.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        showPopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic7).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        showPopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard7).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        showPopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    Array.from(Marquee8).forEach((item) => {
+      item.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        showPopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(ProfilePic8).forEach((pic) => {
+      pic.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        showPopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+    Array.from(blockcard8).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        showPopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee9).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     showPopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    // Array.from(ProfilePic9).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     showPopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard9).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        showPopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee10).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     showPopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    // Array.from(ProfilePic10).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     showPopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard10).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        showPopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee11).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     showPopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    // Array.from(ProfilePic11).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     showPopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard11).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        showPopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee12).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     showPopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    // Array.from(ProfilePic12).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     showPopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard12).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        showPopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee13).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     showPopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });3
+    // Array.from(ProfilePic13).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     showPopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard13).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        showPopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee14).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     showPopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    // Array.from(ProfilePic14).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     showPopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard14).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        showPopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee15).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     showPopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    // Array.from(ProfilePic15).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     showPopLayout(PopLayout15);
+    //     hidePopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard15).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        showPopLayout(PopLayout15);
+        hidePopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+
+    // Array.from(Marquee16).forEach((item) => {
+    //   item.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14);
+    //     hidePopLayout(PopLayout15);
+    //     showPopLayout(PopLayout16);
+    //   });
+    // });
+
+    // Array.from(ProfilePic16).forEach((pic) => {
+    //   pic.addEventListener("click", () => {
+    //     hidePopLayout(PopLayout1);
+    //     hidePopLayout(PopLayout2);
+    //     hidePopLayout(PopLayout3);
+    //     hidePopLayout(PopLayout4);
+    //     hidePopLayout(PopLayout5);
+    //     hidePopLayout(PopLayout6);
+    //     hidePopLayout(PopLayout7);
+    //     hidePopLayout(PopLayout8);
+    //     hidePopLayout(PopLayout9);
+    //     hidePopLayout(PopLayout10);
+    //     hidePopLayout(PopLayout11);
+    //     hidePopLayout(PopLayout12);
+    //     hidePopLayout(PopLayout13);
+    //     hidePopLayout(PopLayout14)5
+    //     hidePopLayout(PopLayout15);
+    //     showPopLayout(PopLayout16);
+    //   });
+    // });
+
+    Array.from(blockcard16).forEach((blockcard) => {
+      blockcard.addEventListener("click", () => {
+        hidePopLayout(PopLayout1);
+        hidePopLayout(PopLayout2);
+        hidePopLayout(PopLayout3);
+        hidePopLayout(PopLayout4);
+        hidePopLayout(PopLayout5);
+        hidePopLayout(PopLayout6);
+        hidePopLayout(PopLayout7);
+        hidePopLayout(PopLayout8);
+        hidePopLayout(PopLayout9);
+        hidePopLayout(PopLayout10);
+        hidePopLayout(PopLayout11);
+        hidePopLayout(PopLayout12);
+        hidePopLayout(PopLayout13);
+        hidePopLayout(PopLayout14);
+        hidePopLayout(PopLayout15);
+        showPopLayout(PopLayout16);
+      });
+    });
+
+
+
+                                              // Break
+
+
+
+    // Event listeners for closing pop-ups
+    Popbtn1.addEventListener("click", () => {
+      hidePopLayout(PopLayout1);
+    });
+
+    Popbtn2.addEventListener("click", () => {
+      hidePopLayout(PopLayout2);
+    });
+
+    Popbtn3.addEventListener("click", () => {
+      hidePopLayout(PopLayout3);
+    });
+
+    Popbtn4.addEventListener("click", () => {
+      hidePopLayout(PopLayout4);
+    });
+
+    Popbtn5.addEventListener("click", () => {
+      hidePopLayout(PopLayout5);
+    });
+
+    Popbtn6.addEventListener("click", () => {
+      hidePopLayout(PopLayout6);
+    });
+
+    Popbtn7.addEventListener("click", () => {
+      hidePopLayout(PopLayout7);
+    });
+
+    Popbtn8.addEventListener("click", () => {
+      hidePopLayout(PopLayout8);
+    });
+
+    Popbtn9.addEventListener("click", () => {
+      hidePopLayout(PopLayout9);
+    });
+
+    Popbtn10.addEventListener("click", () => {
+      hidePopLayout(PopLayout10);
+    });
+
+    Popbtn11.addEventListener("click", () => {
+      hidePopLayout(PopLayout11);
+    });
+
+    Popbtn12.addEventListener("click", () => {
+      hidePopLayout(PopLayout12);
+    });
+
+    Popbtn13.addEventListener("click", () => {
+      hidePopLayout(PopLayout13);
+    });
+
+    Popbtn14.addEventListener("click", () => {
+      hidePopLayout(PopLayout14);
+    });
+
+    Popbtn15.addEventListener("click", () => {
+      hidePopLayout(PopLayout15);
+    });
+
+    Popbtn16.addEventListener("click", () => {
+      hidePopLayout(PopLayout16);
+    });
+
+                                              // Break 
+  SOME OF THE LINES ARE COMMENTED BC THEY ARE NOT ADDED YET - 
+  HENCE IT WILL BREAK THE SCRIPT IF NOT COMMENTED  
+
+2. HTML - index
+  2.1 - Testing new feature for pop-up section
+    <div class="testing1"> box </div>
+  2.2 - Commented Two Box lines
+    <div class="test1">Hi</div>
+    <div class="test2">Hi</div>   
+3. CSS - Pop-up
+  3.1 - testing + hover
+    .Popname1:hover + .testing1 {
+      opacity: 1;
+      transform: translateX(-100%);
+      transform: translateY(-100%);
+      filter: blur(0px);
+    }
+
+    .testing1 {
+      opacity: 0;
+      height: 50px;
+      width: 50px;
+      border: solid blue 2px;
+      background-color: green;
+      transition: 1s;
+      position: relative;
+      left: -35%;
+      bottom: -30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      z-index: -1;
+      filter: blur(3px);
+      transform: translateY(-100%);
+    }  
+4. CSS - School of Quotes Framework
+  4.1 - comment test1 and 2 lines 
+    .test1 {
+      opacity: 0;
+      height: 100px;
+      width: 100px;
+      background-color: green;
+      color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      transition: 1s;
+      filter: blur(3px);
+      position: absolute;
+      transform: translateX(0%);
+      overflow: visible;
+    }
+
+    .box:hover .test1 {
+      opacity: 1;
+      transform: translateX(310%);
+      filter: blur(0px);
+    }
+
+    .test2 {
+      opacity: 0;
+      height: 100px;
+      width: 100px;
+      background-color: green;
+      color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      transition: 1s;
+      filter: blur(3px);
+      position: absolute;
+      transform: translateX(0%);
+    }
+
+    .box:hover .test2 {
+      opacity: 1;
+      transform: translateX(-310%);
+      filter: blur(0px);
+    }
+
+To Do List
+1. Add a randomized feature for content1 (Next Update)
+2. Add deco - (Next Next Update)
+3. Fix deco bugs if any (Next Next Next Update)
+-->

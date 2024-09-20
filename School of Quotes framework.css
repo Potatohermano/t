@@ -1,0 +1,147 @@
+.body {
+  overflow-x: hidden;
+}
+
+/* Logo Intro */
+
+.Main_Frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: -110px;
+  padding: 0px;
+}
+
+.box {
+  display: flex;
+  width: 490px;
+  height: 75px;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  font-size: larger;
+  border: solid red 3px;
+  border-radius: 10px;
+  background-color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: forestgreen;
+}
+
+.Webtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  width: 490px;
+  height: 50px;
+}
+
+/* .test1 {
+  opacity: 0;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: 1s;
+  filter: blur(3px);
+  position: absolute;
+  transform: translateX(0%);
+  overflow: visible;
+}
+
+.box:hover .test1 {
+  opacity: 1;
+  transform: translateX(310%);
+  filter: blur(0px);
+}
+
+.test2 {
+  opacity: 0;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: 1s;
+  filter: blur(3px);
+  position: absolute;
+  transform: translateX(0%);
+}
+
+.box:hover .test2 {
+  opacity: 1;
+  transform: translateX(-310%);
+  filter: blur(0px);
+} */
+
+.box h1 {
+  font-size: 68px;
+  color: white;
+  text-shadow: 1px 1px 1px black, 2px 2px 1px black, 3px 3px 1px black,
+    4px 4px 1px black, 5px 5px 1px black;
+}
+
+/* Content */
+
+.grid_frame {
+  display: grid;
+  grid-template-areas:
+    "1 2 3"
+    "4 5 6"
+    "7 8 9";
+  padding-top: 100px;
+  justify-items: center;
+}
+
+/*title for each content*/
+
+.session_title1 {
+  font-weight: bold;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.session_title2 {
+  font-weight: bold;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.session_title3 {
+  font-weight: bold;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 40px;
+}

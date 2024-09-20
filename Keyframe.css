@@ -1,0 +1,247 @@
+/* School of Quotes, Logo Animations (Start) --- REMOVED*/
+
+/* @keyframes Logo-Down {
+  0% {
+    transform: translateY(0);
+  }
+  99.99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(125px);
+    opacity: 0;
+  }
+}
+
+@keyframes Logo-Still {
+  0% {
+    transform: translateY(125px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(125px);
+    opacity: 1;
+  }
+
+  99.99% {
+    transform: translateY(125px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(125px);
+    opacity: 0;
+  }
+}
+
+@keyframes Logo-Up {
+  0% {
+    transform: translateY(125px);
+    opacity: 1;
+  }
+
+  99.99% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes hand-up1 {
+  0% {
+    transform: translateY(-90px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+
+  99.99% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes hand-up2 {
+  0% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+
+  99.99% {
+    transform: translateY(-25px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+}
+
+@keyframes hand-up3 {
+  0% {
+    transform: translateY(-25px);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-25px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-90px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-90px);
+    opacity: 0;
+  }
+} */
+
+/* School of Quotes, Logo Animations (End) --- REMOVED*/
+
+/* New Easter Egg Feature 4 LOGO (Start) */
+
+@keyframes Logo {
+  from {
+    right: -50%;
+    opacity: 1;
+  }
+  to {
+    right: 100%;
+    opacity: 1;
+  }
+}
+
+/* New Easter Egg Feature 4 LOGO (End) */
+
+/* Content 2, Marquee (Start) */
+
+@keyframes intro2 {
+  from {
+    right: -100%;
+    filter: blur(5px);
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    filter: blur (5px);
+    opacity: 1;
+  }
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+/* Content 2, Marquee (End) */
+
+/* Content 1, Showcase (Start)*/
+
+@keyframes intro1 {
+  from {
+    transform: translateX(-100%);
+    filter: blur(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(100px, 0);
+    filter: blur(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes runningTime {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes Pic {
+  from {
+    transform: translateX(-100%);
+    filter: blur(10px);
+  }
+  to {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes Pic_Info {
+  from {
+    transform: translateX(-110%);
+    filter: blur(10px);
+  }
+  to {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+/* Content 1, Showcase (End)*/
+
+/* Content 3, Start*/
+
+@keyframes Benefits {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Pop-up */
+
+@keyframes Popinfo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

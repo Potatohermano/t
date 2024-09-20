@@ -1,0 +1,2132 @@
+.Popframework1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg1 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname1 {
+  height: 30px;
+  width: 150px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+  color: black;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.Popname1:hover + .testing1 {
+  opacity: 1;
+  transform: translateX(-100%);
+  transform: translateY(-100%);
+  filter: blur(0px);
+}
+
+.testing1 {
+  opacity: 0;
+  height: 50px;
+  width: 50px;
+  border: solid blue 2px;
+  background-color: green;
+  transition: 1s;
+  position: relative;
+  left: -35%;
+  bottom: -30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: -1;
+  filter: blur(3px);
+  transform: translateY(-100%);
+}
+
+.Popinfo1 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo1 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo1 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout1 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn1 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn1:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg2 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname2 {
+  height: 30px;
+  width: 190px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo2 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo2 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo2 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout2 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn2 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn2:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg3 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname3 {
+  height: 30px;
+  width: 220px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo3 {
+  height: 370px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo3 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo3 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout3 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn3 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn3:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg4 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popimg4 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.Popname4 {
+  height: 30px;
+  width: 130px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo4 {
+  height: 450px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo4 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo4 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout4 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn4 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn4:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg5 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname5 {
+  height: 30px;
+  width: 190px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo5 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo5 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo5 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout5 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn5 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn5:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg6 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname6 {
+  height: 30px;
+  width: 120px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo6 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo6 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo6 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout6 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn6 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn6:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg7 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname7 {
+  height: 30px;
+  width: 205px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo7 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo7 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo7 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout7 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn7 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn7:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework8 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg8 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname8 {
+  height: 30px;
+  width: 115px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo8 {
+  height: 400px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo8 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo8 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.Popinfo8 h5 {
+  opacity: 1;
+  filter: blur(5px);
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  transition: 0.5s;
+}
+
+.Popinfo8 h5:hover {
+  opacity: 1;
+  filter: blur(0px);
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+}
+
+#PopLayout8 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn8 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn8:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg9 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname9 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo9 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo9 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo9 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout9 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn9 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn9:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework10 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg10 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname10 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo10 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo10 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo10 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout10 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn10 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn10:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework11 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework11 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework11 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg11 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname11 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo11 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo11 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo11 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout11 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn11 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn11:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework12 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg12 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname12 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo12 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo12 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo12 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout12 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn12 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn12:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework13 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework13 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework13 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg13 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname13 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo13 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo13 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo13 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout13 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn13 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn13:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework14 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework14 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework14 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg14 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname14 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo14 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo14 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo14 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout14 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn14 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn14:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework15 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework15 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework15 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg15 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname15 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo15 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo15 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo15 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout15 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn15 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn15:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/*Break*/
+
+.Popframework16 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+  opacity: 1;
+}
+
+.Popdesframework16 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 600px;
+  width: 950px;
+}
+
+.Popimgframework16 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+.Popimg16 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Popname16 {
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bold;
+  border: blue solid 3px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Popinfo16 {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.Popinfo16 h2 {
+  line-height: 25px;
+  margin: 0px;
+  font-size: 23px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.Popinfo16 h4 {
+  line-height: 20px;
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#PopLayout16 {
+  width: 950px;
+  height: 0px;
+  border: red solid 3px;
+  border-radius: 30px;
+  background-color: red;
+  display: none;
+  opacity: 0;
+  align-content: center;
+  position: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 30px;
+  z-index: 10000;
+  animation: Popinfo 0.5s ease-in 0s 1 forwards;
+}
+
+#Popbtn16 {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 35px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#Popbtn16:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
