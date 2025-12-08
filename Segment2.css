@@ -1,0 +1,213 @@
+.Segment2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(16, 15, 21);
+  z-index: 4;
+  overflow: hidden;
+}
+
+.Segment2img1 img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin-top: -10px;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transform: scaleY(-1);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.Segment2img2 img {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  margin-bottom: -10px;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.FC {
+  scale: 0.01;
+  transition: all 1.2s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Changed from min-height */
+  cursor: pointer; /* Change back to pointer for better UX indication */
+  touch-action: manipulation; /* Optimize for touch devices */
+  will-change: transform; /* Hardware acceleration for animations */
+  pointer-events: auto; /* Changed from none */
+  z-index: 3;
+  filter: blur(20px);
+  touch-action: manipulation;
+}
+
+.show {
+  scale: 1;
+  opacity: 1;
+  filter: blur(0);
+  width: 100%;
+}
+
+.FC img {
+  scale: 0.45;
+}
+
+.main-image {
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto; /* Changed from none */
+  z-index: 2;
+  height: auto; /* Added */
+  width: auto; /* Added */
+  clip-path: inset(
+    180px 200px 200px 200px
+  ); /* Adjust these values to crop top, right, bottom, left */
+  backface-visibility: hidden; /* Reduce paint complexity */
+  transform: translateZ(0); /* Force GPU acceleration */
+  will-change: transform, opacity; /* Optimize transitions */
+  touch-action: manipulation;
+}
+
+.main-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 550px;
+  left: 0;
+  pointer-events: none; /* Changed from auto */
+}
+
+.side-image {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  cursor: default;
+  display: none; /* Hide by default */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.left {
+  transform: translateX(-42%) !important;
+  pointer-events: none;
+}
+
+.right {
+  transform: translateX(42%) !important;
+  pointer-events: none;
+  
+}
+
+/* Show side images only when white-box is showing */
+.white-box.show-box ~ .side-image {
+  display: block;
+}
+
+/* Hide side images when main image is visible */
+.main-image:not(.hidden) ~ .side-image {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  display: none;
+}
+
+.white-box {
+  position: absolute;
+  width: 660px;
+  height: 130px;
+  background-color: white;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  top: -140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  pointer-events: none;
+  }
+
+.white-box.show-box {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.FC_Quotes {
+  visibility: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 660px;
+  height: 130px;
+  }
+
+/* Show FC_Quotes and enable pointer events only when white-box is showing */
+.white-box.show-box ~ .FC_Quotes {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Hide FC_Quotes and disable pointer events when main image is visible */
+.main-image:not(.hidden) ~ .FC_Quotes {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.FC_Quote {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+.FC_Quotes h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 40px;
+  margin: 1px;
+}
+
+.FC_Quotes h4 {
+  color: red;
+  margin: 0px;
+  font-size: 18px;
+} 
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    34% { transform: rotate(10deg); }
+    67% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.shake {
+    animation: shake 0.25s;
+}

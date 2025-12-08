@@ -1,0 +1,1097 @@
+                                        /*Desktop/Laptop (1024px, 1440px, 2560px) Media 
+                                        Status: 1024 - Clear / 1440px - CLEAR / 2560px - ALPHA TESTING */
+@media screen and (min-width:1024px) and (max-height:800px) {
+  .Segment1 {
+    min-height: 1000px;
+  }
+  .Segment1img img {
+    min-height: 120vh;
+  }
+  .containercontent1 {
+    scale: 0.8;
+    top: 33%;
+  }
+  .Segment2img1 img {
+    min-height: 120vh;
+  }
+  .Segment2img2 img {
+    min-height: 120vh;
+  }
+  .show {
+    scale: 0.85;
+  }
+  .FC {
+    top: 4%;
+  }
+  .Segment3 {
+    min-height: 1100px;
+  }
+  .Segment3img img {
+    min-height: 120vh;
+  }
+  .Segment3Content {
+    scale: 0.9;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.8;
+    top: 44%;
+  } 
+}
+
+@media screen and (min-width:1440px) and (max-height:980px){
+  .Segment1 {
+    min-height: 1200px;
+  }
+  .Segment1img img {
+    min-height: 120vh;
+  }
+  .containercontent1 {
+    scale: 1;
+    top: 40%;
+  }
+  .Segment2img1 img {
+    min-height: 120vh;
+  }
+  .Segment2img2 img {
+    min-height: 120vh;
+  }
+  .show {
+    scale: 0.95;
+  }
+  .FC {
+    top: 4%;
+  }
+  .Segment3 {
+    min-height: 1300px;
+  }
+  .Segment3img img {
+    min-height: 120vh;
+  }
+  .Segment3Content {
+    margin-top: 140px;
+    scale: 1;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.9;
+    top: 47.125%;
+  }   
+}
+
+@media screen and (min-width:1440px) and (max-height:880px){
+  .Segment1 {
+    min-height: 1100px;
+  }
+  .Segment1img img {
+    min-height: 120vh;
+  }
+  .containercontent1 {
+    scale: 0.9;
+    top: 40%;
+  }
+  .Segment2img1 img {
+    min-height: 120vh;
+  }
+  .Segment2img2 img {
+    min-height: 120vh;
+  }
+  .show {
+    scale: 0.95;
+  }
+  .FC {
+    top: 4%;
+  }
+  .Segment3 {
+    min-height: 1300px;
+  }
+  .Segment3img img {
+    min-height: 120vh;
+  }
+  .Segment3Content {
+    margin-top: 110px;
+    scale: 1;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.9;
+    top: 47.125%;
+  }   
+}
+
+@media screen and (min-width:1440px) and (max-height:780px){
+  .Segment1 {
+    min-height: 1000px;
+  }
+  .Segment1img img {
+    min-height: 120vh;
+  }
+  .containercontent1 {
+    scale: 0.9;
+    top: 40%;
+  }
+  .Segment2img1 img {
+    min-height: 120vh;
+  }
+  .Segment2img2 img {
+    min-height: 120vh;
+  }
+  .show {
+    scale: 0.95;
+  }
+  .FC {
+    top: 4%;
+  }
+  .Segment3 {
+    min-height: 1300px;
+  }
+  .Segment3img img {
+    min-height: 120vh;
+  }
+  .Segment3Content {
+    margin-top: 110px;
+    scale: 1;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.9;
+    top: 47.125%;
+  }   
+}
+
+@media screen and (min-width:1920px) and (min-height:1080px) {
+  .Segment1 {
+    min-height: 1600px;
+  }
+  .containercontent1 {
+    scale: 1.2;
+    top: 47.5%;
+  }
+  .show {
+    scale: 1.3;
+  }
+  .Segment3Content {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (min-width:2560px) {
+  .Segment1 {
+    min-height: 1700px;
+  }
+  .containercontent1 {
+    scale: 1.2;
+    top: 50%;
+  }
+  .Segment1img img {
+    min-height: 130vh;
+  }
+  .Segment2img1 img {
+    min-height: 130vh;
+  }
+  .Segment2img2 img {
+    min-height: 130vh;
+  }
+  .show {
+    scale: 1.2;
+  }
+  .Segment3 {
+    min-height: 1600px;
+  }
+  .Segment3img img {
+    min-height: 130vh;
+  }
+  .Segment3Content {
+    scale: 1.2;
+    margin-top: 220px;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 1.2;
+    top: 54%;
+  }  
+}
+
+@media screen and (min-width:2560px) and (min-height: 1440px){
+  .Segment1 {
+    min-height: 1850px;
+  }
+  .containercontent1 {
+    scale: 1.3;
+    top: 50%;
+  }
+  .Segment1img img {
+    min-height: 130vh;
+  }
+  .Segment2img1 img {
+    min-height: 130vh;
+  }
+  .Segment2img2 img {
+    min-height: 130vh;
+  }
+  .show {
+    scale: 1.4;
+  }
+  .Segment3 {
+    min-height: 1700px;
+  }
+  .Segment3img img {
+    min-height: 130vh;
+  }
+  .Segment3Content {
+    scale: 1.2;
+    margin-top: 220px;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 1.25;
+    top: 54%;
+  }  
+}
+
+
+                                        /*Landscape Media*/
+
+
+/* MacBook Pro 16 (M1/M2/M3 Pro/Max) (1728x1117) Pink*/
+@media only screen 
+and (max-device-width: 1728px)
+and (min-device-height: 1117px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2) {
+  .Segment1 {
+    min-height: 1400px;
+  }
+  .Segment3 {
+    min-height: 1300px;
+  }
+  .Segment3Content {
+    margin-top: 110px;
+  }
+  .end {
+    color:pink;
+  }  
+}
+
+/* MacBook Pro 14 (M1/M2 Pro/Max) (1512x982) Orange*/
+@media only screen 
+and (max-device-width: 1512px)
+and (min-device-height: 982px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2) {
+  .Segment1 {
+    min-height: 1200px;
+  }
+  .Segment3 {
+    min-height: 1300px;
+  }
+  .Segment3Content {
+    margin-top: 110px;
+  }
+  .end {
+    color: orange;
+  }
+}
+
+/* MacBook Air 13.3 (M1) (1280x800), Pro 13 (1280x800), 
+Air 13.6 (M2) (1280x832) Yellowgreen*/
+@media only screen 
+and (max-device-width: 1280px)
+and (min-device-height: 800px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2) {
+  .Segment1 {
+    min-height: 1000px;
+  }
+  .Segment3 {
+    min-height: 1300px;
+  }
+  .FC {
+    top: 4%;
+  }
+  .Segment3Content {
+    margin-top: 80px;
+  }
+  .end {
+    color:yellowgreen;
+  }  
+}                                        
+        
+
+                                        
+                                        /*Landscape Media*/
+
+
+                                        
+/* iPhone X, XS, iPhone XS Max, 11 Pro Max, 11 Pro, iPhone 12 Mini, 13 Mini, 
+iPhone 12/13/14/15/16, 12/13/14/15/16 Pro, iPhone 12/13/14/15/16 Pro Max, 
+14/15/16 Plus - Purple*/
+/* Landscape */
+@media only screen 
+and (max-device-width: 1000px) /*TESTING*/
+and (min-resolution: 3dppx)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: landscape) {
+  .Segment1 {
+    min-height: 700px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .Segment1img img {
+    height: 120vh;
+  }
+  .containercontent1 {
+    scale: 0.8;
+    top: 33%;
+  }
+  .Webtitle {
+    scale: 0.9;
+  }
+  .box h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+  }
+
+  .content1 {
+    width: 640px;
+    height: 360px;
+  }
+
+  .list {
+    width: 120px;
+    height: 65px;
+    top: 286.5px;
+    }
+
+  .content1 .item1 .list:nth-child(1),
+  .content1 .item1 .list:nth-child(2) {
+    width: 640px;
+    height: 360px;
+  }
+
+  .Segment2 {
+    min-height: 550px;
+  }
+  .Segment2img1 img {
+    height: 120vh;
+  }
+  .Segment2img2 img {
+    height: 120vh;
+  }
+
+  .FC {
+    top: 30px;
+  }
+
+  .show {
+    scale: 0.8;
+  }
+
+  .Segment3 {
+    min-height: 1400px;
+  }
+
+  .Segment3img img {
+    height: 120vh;
+  }
+
+
+  .Segment3Content {
+    margin-top: 45px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: purple;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.625;
+    top: 32.75%;
+  }
+}
+
+/* iPhone XR, 11 - 6.1" (414x896, 2x) Yellow*/
+/* Landscape */
+@media only screen 
+and (min-device-height : 414px) 
+and (max-device-width : 896px) 
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio : 2)
+and (orientation: landscape) {
+  .Segment1 {
+    min-height: 700px ;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .Segment1img img {
+    height: 120vh;
+  }
+  .containercontent1 {
+    scale: 0.8;
+    top: 33%;
+  }
+  .Webtitle {
+    scale: 0.9;
+  }
+  .box h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+  }
+
+  .content1 {
+    width: 640px;
+    height: 360px;
+  }
+
+  .list {
+    width: 120px;
+    height: 65px;
+    top: 286px;
+    }
+
+  .content1 .item1 .list:nth-child(1),
+  .content1 .item1 .list:nth-child(2) {
+    width: 640px;
+    height: 360px;
+  }
+
+  .Segment2 {
+    min-height: 500px;
+  }
+
+  .Segment2img1 img {
+    height: 120vh;
+  }
+  .Segment2img2 img {
+    height: 120vh;
+  }
+
+  .FC {
+    top: 20px;
+  }
+
+  .show {
+    scale: 0.75;
+  }
+
+  .Segment3 {
+    min-height: 1300px;
+  }
+
+  .Segment3img img {
+    height: 120vh;
+  }
+  .Segment3Content {
+    scale: 0.9;
+    margin-top: 20px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: yellow;
+  }
+
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.6;
+    top: 30%;
+  }
+}
+
+/* iPad Pro 12.9" (3rd-6th Gen. (1024x1366)), Pro 13" (7th Gen. (1032x1376)), 
+Ipad Air 13" (6th Gen. (1024x1366)), Skyblue*/
+/* Landscape */
+@media only screen 
+and (min-device-height: 1024px)
+and (max-device-width: 1376px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .Segment1 {
+    min-height: 1300px;
+  }  
+  .Segment1-bg {
+    height: 130%;
+  }
+  .FC {
+    top: 25px;
+  }
+  .Segment3 {
+    min-height: 1400px;
+  }
+  .end {
+    color: skyblue;
+  }
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 1;
+    top: 50%;
+  }  
+}
+
+/*Ipad Pro 11" (1st-4th Gen. (834x1194)) (5th/6th Gen. (834x1210)), Pink*/
+@media only screen 
+and (min-device-height: 834px)
+and (max-device-width: 1210px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .Segment1 {
+    min-height: 1100px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .containercontent1 {
+    scale: 0.9;
+    top: 40%;
+  }
+  .FC {
+    top: 25px;
+  }
+
+  .show {
+    scale: 1;
+  }
+
+  .Segment3 {
+    min-height: 1300px;
+  }
+  .Segment3Content {
+    scale: 1;
+  }
+  .end {
+    color: pink;
+  }
+
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.9;
+    top: 47.25%;
+  } 
+}
+
+/* iPad Mini (5th gen) - 7.9" (768x1024), iPad Mini (6th gen) - 8.3" (744x1133) Teal*/
+/* Landscape */
+@media only screen 
+and (min-device-height: 744px)
+and (max-device-width: 1133px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .Segment1 {
+    min-height: 1000px ;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .Webtitle {
+    scale:0.9;
+  }
+  .box h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+  }
+
+  .content1 {
+    width: 640px;
+    height: 360px;
+  }
+
+  .list {
+    width: 120px;
+    height: 65px;
+    top: 287px;
+    }
+
+  .content1 .item1 .list:nth-child(1),
+  .content1 .item1 .list:nth-child(2) {
+    width: 640px;
+    height: 360px;
+  }
+
+  .Segment2 {
+    min-height: 550px;
+  }
+
+  .FC {
+    top: 20px;
+  }
+
+  .show {
+    scale: 0.85;
+  }
+
+  .Segment3 {
+    min-height: 1500px;
+  }
+
+  .Segment3Content {
+    margin-top: 80px;
+  }
+
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: teal;
+  }
+
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.75;
+    top: 42.5%;
+  }
+}
+
+/* Ipad 10.2" (7th-9th Gen. (810x1080)), 10.9" (10th Gen. (810x1080)) Purple*/
+/* Landscape */
+@media only screen 
+and (min-device-height: 810px)
+and (max-device-width: 1080px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .Segment1 {
+    min-height: 1000px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .containercontent1 {
+    scale: 1.2;
+    top: 45%;
+  }
+  .Webtitle {
+    scale: 0.8;
+  }
+  .FC {
+    top: 20px;
+  }
+
+  .show {
+    scale: 1;
+  }
+
+  .Segment3{
+    min-height: 1300px;
+  } 
+
+  .Segment3Content {
+    margin-top: 80px;
+  }
+
+  .cardframe {
+    width: 1100px;
+  }
+
+  .end {
+    color: Purple;
+  }
+}
+
+/* Ipad Air 10.9" (4th-6th Gen. (820x1180)) Red*/
+/* Landscape */
+@media only screen 
+and (min-device-height: 820px)
+and (max-device-width: 1180px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .Segment1 {
+    min-height: 1000px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .FC {
+    top: 20px;
+  }
+
+  .show {
+    scale: 1;
+  }
+
+  .Segment3{
+    min-height: 1300px;
+  } 
+
+  .Segment3Content {
+    margin-top: 80px;
+  }
+
+  .cardframe {
+    width: 1100px;
+  }
+
+  .end {
+    color:red;
+  }
+
+}
+
+/* SE (3rd gen) - 4.7" (375x667) Red*/
+/* Landscape*/
+@media only screen 
+and (max-device-width: 667px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+  .Segment1 {
+    min-height: 800px ;
+  } 
+
+  .Segment1-bg{
+    height: 130%;
+  }
+
+  .containercontent1{
+    scale: 0.7;
+    top: 30%;
+  }
+
+  .Webtitle h1 {
+    font-size: 80px;
+  }
+
+  .list {
+    top: 379px;
+  }
+
+  .FC {
+    top: 25px;
+  }
+
+  .show {
+    scale: .8;
+  }
+
+  .Segment3 {
+    min-height: 1450px;
+  }
+
+  .Segment3Content {
+    scale: 1;
+    margin-top: 0px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color:red;
+  }
+
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.7;
+    top: 37.75%;
+  }
+
+}
+
+
+
+                                          /*Portrait Media*/
+
+
+
+/* iPhone X, XS, iPhone XS Max, 11 Pro Max, 11 Pro, iPhone 12/13 Mini, 
+iPhone 12/13/14/15/16, 12/13/14/15/16 Pro, 12/13/14/15/16 Pro Max, 14/15/16 Plus (Purple)
+KEEP AN EYE ON - WILL REQUIRE EXPERIMENTING*/
+@media only screen 
+and (min-device-width: 300px)
+and (min-resolution: 3dppx)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+  .Segment1 {
+    min-height: 2400px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .show {
+    scale: 1;
+  }  
+  .Segment3 {
+    min-height: 2000px;
+  }
+  .Segment3Content {
+    margin-top: 170px;
+    scale: 1.1;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: purple;
+  }
+}
+
+/* iPad Pro 12.9" (3rd-6th Gen. (1024x1366)), Pro 13" (7th Gen. (1032x1376)), 
+Ipad Air 13" (6th Gen. (1024x1366)), Skyblue*/
+@media only screen 
+and (min-device-height: 1366px)
+and (max-device-width: 1032px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .Segment1 {
+    min-height: 1700px;
+  } 
+
+  .Segment3 {
+    height: 1500px;
+  }
+  .Segment3Content {
+    margin-top: 120px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: skyblue;
+  }  
+}
+
+/*Ipad Pro 11" (1st-4th Gen. (834x1194)) (5th/6th Gen. (834x1210)), Skyblue*/
+@media only screen 
+and (min-device-height: 1194px)
+and (max-device-width: 834px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .Segment1 {
+    min-height: 1700px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .FC {
+    top: 25px;
+  }
+  .Segment3 {
+    min-height: 1500px;
+  }
+  .Segment3Content {
+    scale: 1;
+    margin-top: 150px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: skyblue;
+  }
+
+}
+
+/* 10.9", Ipad Air (820x1180) Red*/
+@media only screen 
+and (min-device-height: 1180px)
+and (max-device-width: 830px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .Segment1 {
+    min-height: 1475px;
+  }
+  .containercontent1 {
+    scale: 0.8;
+    top: 40%;
+  }
+
+  .FC {
+    top: 20px;
+  }
+
+  .show {
+    scale: 0.8;
+  }
+
+  .Segment3 {
+    height: 1350px;
+  }
+
+  .Segment3Content {
+    scale: .9;
+  }
+
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color:Red;
+  }
+
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.8;
+    top: 45%;
+  }    
+}
+
+/* Ipad 10.2" (7th-9th Gen. (810x1080)), 10.9" (10th Gen. (810x1080)) Purple*/
+@media only screen 
+and (min-device-height: 1080px)
+and (max-device-width: 810px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: Portrait) {
+  .Segment1 {
+    min-height: 1650px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .FC {
+    top: 20px;
+  }
+
+  .show {
+    scale: 1;
+  }
+
+  .Segment3{
+    min-height: 1500px;
+  } 
+
+  .Segment3Content {
+    margin-top: 140px;
+  }
+
+  .cardframe {
+    width: 900px;
+  }
+
+  .end {
+    color: Purple;
+  }
+
+  #PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+  #PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+  #PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+  #PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+    scale: 0.9;
+    top: 47.5%;
+  }  
+}
+
+/* iPad Mini (5th gen) - 7.9" (768x1024), iPad Mini (6th gen) - 8.3" (744x1133) Teal*/
+@media only screen 
+and (min-device-height: 1024px)
+and (max-device-width: 768px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .Segment1 {
+    min-height: 1600px;
+  }
+  .FC {
+    top: 20px;
+  }
+  .Segment3 {
+    min-height: 1500px;
+  }
+  .Segment3Content {
+
+    margin-top: 120px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: Teal;
+  }
+ 
+}
+
+/* iPhone XR, 11 - 6.1" (414x896, 2x) Yellow*/
+@media only screen 
+and (max-device-width: 414px)
+and (min-resolution: 2dppx)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .Segment1 {
+    min-height: 2500px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .FC {
+    top: 20px;
+  }
+  .show {
+    scale: 1.05;
+  }
+  .Segment3 {
+    min-height: 1900px;
+  }
+  .Segment3Content {
+    scale: 1.1;
+    margin-top: 150px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color: yellow;
+  }  
+}
+
+/* SE (3rd gen) - 4.7" (375x667) Red*/
+@media only screen
+  and (max-device-width: 375px)
+  and (min-resolution: 2dppx)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .Segment1 {
+    min-height: 2200px;
+  }
+  .Segment1-bg {
+    height: 130%;
+  }
+  .Segment3 {
+    min-height: 1700px;
+  }
+  .Segment3Content {
+    margin-top: 160px;
+  }
+  .cardframe {
+    width: 900px;
+  }
+  .end {
+    color:red;
+  }
+}

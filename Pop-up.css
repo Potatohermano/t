@@ -1,0 +1,144 @@
+.GroupPop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.midpopline {
+  width: 3px;
+  height: 80%;
+  background-color: black;
+}
+
+/* Modify existing PopLayout styles to work with overlay */
+#PopLayout1, #PopLayout2, #PopLayout3, #PopLayout4, #PopLayout5,
+#PopLayout6, #PopLayout7, #PopLayout8, #PopLayout9, #PopLayout10,
+#PopLayout11, #PopLayout12, #PopLayout13, #PopLayout14, #PopLayout15,
+#PopLayout16, #PopLayout17, #PopLayout18, #PopLayout19, #PopLayout20 {
+  border: gray outset 3px;
+  border-radius: 20px;
+  background-color: rgb(179, 172, 172);
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  align-content: center;
+  z-index: 100;
+  position: fixed; /* Change from absolute to fixed */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+/* Merge all Popframework classes */
+.Popframework1, .Popframework2, .Popframework3, .Popframework4, .Popframework5,
+.Popframework6, .Popframework7, .Popframework8, .Popframework9, .Popframework10,
+.Popframework11, .Popframework12, .Popframework13, .Popframework14, .Popframework15,
+.Popframework16, .Popframework17, .Popframework18, .Popframework19, .Popframework20 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 450px;
+  width: 820px;
+}
+
+/* Merge Popimgframework classes */
+.Popimgframework1, .Popimgframework2, .Popimgframework3, .Popimgframework4, .Popimgframework5, .Popimgframework6,
+.Popimgframework7, .Popimgframework8, .Popimgframework9, .Popimgframework10, .Popimgframework11, .Popimgframework12,
+.Popimgframework13, .Popimgframework14, .Popimgframework15, .Popimgframework16, .Popimgframework17, .Popimgframework18,
+.Popimgframework19, .Popimgframework20 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+/* Merge Popimg classes */
+.Popimg1, .Popimg2, .Popimg3, .Popimg4, .Popimg5, .Popimg6, .Popimg7, .Popimg8,
+.Popimg9, .Popimg10, .Popimg11, .Popimg12, .Popimg13, .Popimg14, .Popimg15, .Popimg16,
+.Popimg17, .Popimg18, .Popimg19, .Popimg20 {
+  height: 250px;
+  width: 240px;
+  border: rgb(0, 0, 0) solid 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Merge Popname classes */
+.Popname1, .Popname2, .Popname3, .Popname4, .Popname5,
+.Popname6, .Popname7, .Popname8, .Popname9, .Popname10,
+.Popname11, .Popname12, .Popname13, .Popname14, .Popname15,
+.Popname16, .Popname17, .Popname18, .Popname19, .Popname20 {
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* Merge Popinfo classes */
+[class^="Popinfo"] {
+  width: 450px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Merge Popinfo h2 styles */
+[class^="Popinfo"] h2 {
+  margin: 0px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* Merge Popinfo h4 styles */
+[class^="Popinfo"] h4 {
+  margin: 0px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Keep individual img styles if they have specific settings */
+[class^="Popimg"] img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Merge Popbtn styles */
+[id^="Popbtn"] {
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 22px;
+  height: 40px;
+  width: 80px;
+  position: absolute;
+  bottom: 6%;
+  overflow: hidden;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* Merge Popbtn hover styles */
+[id^="Popbtn"]:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}

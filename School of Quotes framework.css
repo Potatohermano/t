@@ -1,0 +1,68 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: rgb(16, 15, 21);
+}
+
+/* Homepage button */
+
+.Homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100px;
+  height: 40px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  background-color: wheat;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  pointer-events: auto;
+  border: wheat solid 2px;
+  box-shadow: rgba(0, 0, 0, 1) 0px 4px 12px;
+}
+
+.Homepage a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.Homepage:hover {
+  border: red solid 2px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+}
+
+/* Segment 3 Copyright */
+
+.end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  bottom: 0%;
+  z-index: 6; 
+  color: white;
+  font-size: large;
+  font-style: bold;
+  margin: 0;
+  padding: 0;
+}
+
+/* Content */
+
+.FlexFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

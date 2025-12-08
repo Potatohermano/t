@@ -1,0 +1,225 @@
+.Segment3 {
+  position: relative; /* Add this */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 1400px;
+  background: rgb(16, 15, 21);
+  z-index: 5;
+  overflow: hidden;
+}
+
+.Segment3img img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin-top: -10px;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transform: scaleY(-1);
+  pointer-events: none;
+  z-index: 6;
+}
+
+.Segment3Content {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.Segment3Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 120px;
+  z-index: 5;
+  color: white;
+  font-size: 50px;
+  font-style: bold;
+  transition: 1s;
+  text-decoration: underline 3px;
+  -webkit-text-decoration: underline 3px;
+}
+
+.cardframe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  touch-action: manipulation;
+
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100px);
+  filter: blur(7px);
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateX(0px);
+  filter: blur(0px);
+}
+
+.blockcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  width: 180px;
+  height: 200px;
+  pointer-events: auto;
+}
+
+.blockcard:nth-child(n):hover {
+  transition: 0.5s ease;
+}
+
+.blockname {
+  background-color: white;
+  width: auto;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  opacity: 1;
+  transition: 0.25s;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  bottom: 2%;
+  pointer-events: auto;
+  cursor: pointer;
+  border: solid rgb(16, 15, 21) 4px;
+  white-space: nowrap;
+}
+
+.blockcard:hover .blockname {
+  border: solid red 4px;
+}
+
+.benefits {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  bottom: -5px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  pointer-events: auto;
+  cursor: pointer;
+  border: solid rgb(16, 15, 21) 4px;
+}
+
+.benefits img {
+  object-fit: cover;
+  width: 102%;
+  height: 100%;
+  display: block;
+  touch-action: manipulation;
+
+}
+
+.blockcard:hover .benefits {
+  border: solid red 4px;
+}
+
+.blockcard:nth-child(1) {
+  transition-delay: 500ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(2) {
+  transition-delay: 575ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(3) {
+  transition-delay: 650ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(4) {
+  transition-delay: 725ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(5) {
+  transition-delay: 800ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(6) {
+  transition-delay: 875ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(7) {
+  transition-delay: 950ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(8) {
+  transition-delay: 1025ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(9) {
+  transition-delay: 1100ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(10) {
+  transition-delay: 1175ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(11) {
+  transition-delay: 1250ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(12) {
+  transition-delay: 1325ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(13) {
+  transition-delay: 1400ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(14) {
+  transition-delay: 1475ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(15) {
+  transition-delay: 1550ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(16) {
+  transition-delay: 1625ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(17) {
+  transition-delay: 1700ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(18) {
+  transition-delay: 1775ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(19) {
+  transition-delay: 1850ms;
+  transition-property: opacity, transform, filter;
+}
+.blockcard:nth-child(20) {
+  transition-delay: 1925ms;
+  transition-property: opacity, transform, filter;
+}
